@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li,ul,ol {
+    list-style: none;
+}
+.sky{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/sun-sunlight-bright-outdoor-sky.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x:hidden;
+}
+.road {
+    width: 500%;
+    height: 150px;
+    display: block;
+    background-image: url(../image/Artboard\ 1.png);
+    background-position: center;
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: road 4s linear infinite;
+}
+@keyframes road {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+.city {
+    width: 500%;
+    height: 400px;
+    background-image: url(../image/city.png);
+    position: absolute;
+    bottom: 149px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: city 4s linear infinite;
+}
+@keyframes city {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-500px);
+    }
+}
+.car {
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8%;
+    z-index: 2;
+}
+.car img{
+    width: 100%;
+    animation: shake 1s linear infinite;
+    animation: Move 2s linear 3s infinite;
+}
+@keyframes shake {
+    0% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(-1);
+    }
+}
+.tire1 {
+    width: 57px;
+    position: absolute;
+    left: 42.4%;
+    bottom: 10%;
+    z-index: 3;
+}
+.tire1 img {
+    width: 100%;
+    animation: tire 2s linear infinite;
+    /* animation: Move 2s linear 3s infinite; */
+
+}
+.tire2 {
+    width: 57px;
+    position: absolute;
+    left: 54.3%;
+    bottom: 10%;
+    z-index: 3;
+}
+.tire2 img {
+    width: 100%;
+    animation: tire 2s linear infinite;
+    /* animation: Move 2s linear 3s infinite; */
+
+}
+@keyframes tire {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+/* @keyframes Move {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(1000px);
+    }
+} */
